@@ -15,6 +15,15 @@ namespace CsharpClasses
         // Can't be accessed due to protection level //
         private int ExperiencePoints;
 
+        public Creature(string name, int age, string species, bool isAwake)
+        {
+            Name = name;
+            Age = age;
+            Species = species;
+            IsAwake = isAwake;
+            Console.WriteLine("It's aliveeeeeeeee"); 
+        }
+
         // Greet Method //
         public void Greet()
         {
@@ -27,6 +36,11 @@ namespace CsharpClasses
         {
             WriteLine("It is time to go to sleep.");
             IsAwake = false; 
+        }
+
+        public void Eat(string food)
+        {
+            WriteLine($"{Name} is eating {food}"); 
         }
     }
 }
